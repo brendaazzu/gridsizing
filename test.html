@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSyGnQna512h1ZoBlTmV7fw22Sk-dFRLGxupJ2NvHvkWm2Wmhqt5XWFHt5px1JER-fSPg&usqp=CAU" type="image/png">
+    <title>CSS Grid Sizing Exercise</title>
+
+    <style>
+
+      @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+      body {
+        
+        font-family: "Tilt Neon", sans-serif;
+        color: #000000;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        background: linear-gradient(to top, rgba(32, 176, 243, 0.32), rgba(14, 215, 195, 0.311));
+      }
+
+      h1 {
+        border: 3px dashed black; 
+        border-radius: 12.5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      textarea {
+        width: 80%;
+        min-height: 150px;
+        margin-top: 20px;
+        resize: vertical;
+        font-family: monospace;
+        border: 0.25px solid black;  
+        border-radius: 12.5px;
+        padding: 10px;
+      }
+
+      button {
+        font-family: "Tilt Neon", sans-serif;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background: linear-gradient(to top, rgb(32, 176, 243), rgb(14, 215, 195));
+        color: black;
+        font-size: 16px;
+        border: none;
+        border: 0.5px solid black;  
+        border-radius: 12.5px;
+        cursor: pointer;
+      }
+
+      .parent {
+        display: grid;
+        grid-template-rows: 1fr 1fr 2fr;
+        grid-template-columns: auto 400px minmax(200px, 500px);
+        grid-auto-rows: 50px;
+        width: 80%;
+        background: linear-gradient(to bottom, rgb(32, 176, 243), rgb(14, 215, 195));
+        padding: 20px;
+        margin: 2rem;
+        border-radius: 12.5px;
+        border: 1.5px solid black;   
+      }
+
+      .parent>* {
+        background: linear-gradient(to top, #ddd, #ffffff);
+        color: black;
+        font-size: 18px;
+        padding: 20px;
+        border-radius: 12.5px;
+        border: 1.5px solid black;   
+      }
+
+      .grid-container {
+        width: 80%;
+        background: linear-gradient(to top, rgb(32, 176, 243), rgb(14, 215, 195));
+        padding: 20px;
+        margin: 2rem;
+        border-radius: 12.5px;
+        border: 1.5px solid black;   
+      }
+
+      .grid-item {
+        background: linear-gradient(to top, #ddd, #ffffff);
+        color: black;
+        font-size: 18px;
+        padding: 20px;
+        border-radius: 12.5px;
+        border: 1.5px solid black; 
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <h1>CSS Grid Sizing Exercise</h1>
+
+    <div class="parent">
+
+        <div class="child">width expands to fill space</div>
+        <div class="child">400px wide</div>
+        <div class="child">min 200px max 500px wide</div>
+        <div class="child">width expands to fill space</div>
+        <div class="child">400px wide</div>
+        <div class="child">min 200px max 500px wide</div>
+        <div class="child">width expands to fill space</div>
+        <div class="child">400px wide</div>
+        <div class="child">min 200px max 500px wide</div>
+        <div class="child">50px high</div>
+
+    </div>
+
+    <div class="grid-container" id="container">
+
+        <div class="grid-item">width expands to fill space</div>
+        <div class="grid-item">400px wide</div>
+        <div class="grid-item">min 200px max 500px wide</div>
+        <div class="grid-item">width expands to fill space</div>
+        <div class="grid-item">400px wide</div>
+        <div class="grid-item">min 200px max 500px wide</div>
+        <div class="grid-item">width expands to fill space</div>
+        <div class="grid-item">400px wide</div>
+        <div class="grid-item">min 200px max 500px wide</div>
+        <div class="grid-item">50px high</div>
+
+    </div>
+
+    <textarea id="user-css" placeholder="Write your CSS code here..." rows="25">
+    /* Write your CSS code below to make the purple items size, grow and shrink like the green ones.*/
+    .grid-container {
+    }    
+    </textarea>
+
+    <button onclick="applyUserCss()">Apply CSS</button>
+
+    <script>
+
+      function applyUserCss() {
+        const userCss = document.getElementById('user-css').value;
+        const style = document.createElement('style');
+        style.innerHTML = userCss;
+        document.head.appendChild(style);
+      }
+
+    </script>
+
+  </body>
+
+</html>

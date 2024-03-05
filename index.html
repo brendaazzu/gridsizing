@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSyGnQna512h1ZoBlTmV7fw22Sk-dFRLGxupJ2NvHvkWm2Wmhqt5XWFHt5px1JER-fSPg&usqp=CAU" type="image/png">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Grid Sizing</title>       
+
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <h1>Grid Sizing</h1>
+            
+            <button id="btn1" onmouseover="showPreview1()" onmouseout="hidePreview1()" onclick="window.open('./fixed-size.html', '_blank')">Fixed Size</button>
+            <iframe id="preview1"></iframe>
+            
+            <button id="btn2" onmouseover="showPreview2()" onmouseout="hidePreview2()" onclick="window.open('./auto-size.html', '_blank')">Auto Size</button>
+            <iframe id="preview2"></iframe>
+
+            <button id="btn3" onmouseover="showPreview3()" onmouseout="hidePreview3()" onclick="window.open('./fractional-size.html', '_blank')">Fractional Size</button>
+            <iframe id="preview3"></iframe>
+
+            <button id="btn4" onmouseover="showPreview4()" onmouseout="hidePreview4()" onclick="window.open('./minmax-size.html', '_blank')">MinMax Size</button>
+            <iframe id="preview4"></iframe>
+
+            <button id="btn5" onmouseover="showPreview5()" onmouseout="hidePreview5()" onclick="window.open('./repeat.html', '_blank')">Repeat</button>
+            <iframe id="preview5"></iframe>
+            
+            <button id="btn6" onmouseover="showPreview6()" onmouseout="hidePreview6()" onclick="window.open('./test.html', '_blank')">Test</button>
+            <iframe id="preview6"></iframe>
+            
+            <script src="script.js"></script>
+
+        </div>
+
+    </body>
+
+</html>
